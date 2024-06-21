@@ -129,22 +129,22 @@ function App() {
             <img
               src={FACEBOOK_ICON}
               alt=""
-              className=" w-5 h-5 cursor-pointer z-10"
+              className=" w-5 h-5 cursor-pointer z-10 hover:scale-105"
             />
             <img
               src={TWITTER_ICON}
               alt=""
-              className=" w-5 h-5 cursor-pointer z-10"
+              className=" w-5 h-5 cursor-pointer z-10 hover:scale-105"
             />
             <img
               src={PINTREST_ICON}
               alt=""
-              className=" w-5 h-5 cursor-pointer z-10"
+              className=" w-5 h-5 cursor-pointer z-10 hover:scale-105"
             />
             <img
               src={INSTAGRAM_ICON}
               alt=""
-              className=" w-5 h-5 cursor-pointer z-10"
+              className=" w-5 h-5 cursor-pointer z-10 hover:scale-105"
             />
           </div>
         </div>
@@ -154,55 +154,55 @@ function App() {
               Our company
             </h1>
             <p>
-              <a href="">How we work</a>
+              <a href="" className=" hover:underline">How we work</a>
             </p>
             <p>
-              <a href="">Why Insure?</a>
+              <a href="" className=" hover:underline">Why Insure?</a>
             </p>
             <p>
-              <a href="">View plans</a>
+              <a href="" className=" hover:underline">View plans</a>
             </p>
             <p>
-              <a href="">Reviews</a>
+              <a href="" className=" hover:underline">Reviews</a>
             </p>
           </div>
           <div className=" text-center space-y-2 font-semibold laptop:text-left">
             <h1 className=" text-base-500 font-semibold pb-4 z-10">Help me</h1>
             <p>
-              <a href="">FAQ</a>
+              <a href="" className=" hover:underline">FAQ</a>
             </p>
             <p>
-              <a href="">Terms of use</a>
+              <a href="" className=" hover:underline">Terms of use</a>
             </p>
             <p>
-              <a href="">Privacy policy</a>
+              <a href="" className=" hover:underline">Privacy policy</a>
             </p>
             <p>
-              <a href="">Cookies</a>
+              <a href="" className=" hover:underline">Cookies</a>
             </p>
           </div>
           <div className=" text-center space-y-2 font-semibold laptop:text-left">
             <h1 className=" text-base-500 font-semibold pb-4 z-10">Contact</h1>
             <p>
-              <a href="">Sales</a>
+              <a href="" className=" hover:underline">Sales</a>
             </p>
             <p>
-              <a href="">Support</a>
+              <a href="" className=" hover:underline">Support</a>
             </p>
             <p>
-              <a href="">Live chat</a>
+              <a href="" className=" hover:underline">Live chat</a>
             </p>
           </div>
           <div className=" text-center space-y-2 font-semibold laptop:text-left">
             <h1 className=" text-base-500 font-semibold pb-4 z-10">Others</h1>
             <p>
-              <a href="">Careers</a>
+              <a href="" className=" hover:underline">Careers</a>
             </p>
             <p>
-              <a href="">Press</a>
+              <a href="" className=" hover:underline">Press</a>
             </p>
             <p>
-              <a href="">Licenses</a>
+              <a href="" className=" hover:underline">Licenses</a>
             </p>
           </div>
         </div>

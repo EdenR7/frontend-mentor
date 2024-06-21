@@ -14,13 +14,22 @@ function NavBar(props) {
         </div>
         <div className=" font-karla text-sm">
           <div className="space-x-3 hidden tablet:block">
-            <a href="#" className=" text-base-500 font-semibold">
+            <a
+              href="#"
+              className=" text-base-500 font-semibold hover:text-primary-700"
+            >
               HOW WE WORK
             </a>
-            <a href="#" className=" text-base-500 font-semibold">
+            <a
+              href="#"
+              className=" text-base-500 font-semibold hover:text-primary-700"
+            >
               BLOG
             </a>
-            <a href="#" className=" text-base-500 font-semibold">
+            <a
+              href="#"
+              className=" text-base-500 font-semibold hover:text-primary-700"
+            >
               ACCOUNT
             </a>
             <Button>VIEW PLANS</Button>
