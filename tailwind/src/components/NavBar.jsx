@@ -1,9 +1,11 @@
 import React from "react";
 import LOGO from "../assets/images/logo.svg";
 import HAMBURGER from "../assets/images/icon-hamburger.svg";
+import CLOSE_ICON from "../assets/images/icon-close.svg";
 import Button from "./ui/Button";
 
-function NavBar() {
+function NavBar(props) {
+  const { icon, iconOnClick } = props;
   return (
     <div className="  6xl:flex 6xl:justify-center">
       <nav className="flex justify-between items-center py-4 px-6 border-b border-solid 6xl:w-6xl 6xl:px-0 laptop:px-16">
@@ -24,7 +26,8 @@ function NavBar() {
             <Button>VIEW PLANS</Button>
           </div>
           <img
-            src={HAMBURGER}
+            onClick={iconOnClick}
+            src={icon}
             alt=""
             className=" cursor-pointer tablet:hidden"
           />

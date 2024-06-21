@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import LOGO from "./assets/images/logo.svg";
 import SNAPPY_ICON from "./assets/images/icon-snappy-process.svg";
 import AFFORDABLE_ICON from "./assets/images/icon-affordable-prices.svg";
@@ -11,16 +11,71 @@ import FACEBOOK_ICON from "./assets/images/icon-facebook.svg";
 import TWITTER_ICON from "./assets/images/icon-twitter.svg";
 import PINTREST_ICON from "./assets/images/icon-pinterest.svg";
 import INSTAGRAM_ICON from "./assets/images/icon-instagram.svg";
+import MENU_DECORATOR from "./assets/images/bg-pattern-mobile-nav.svg";
+import CLOSE_ICON from "./assets/images/icon-close.svg";
+import HAMBURGER from "./assets/images/icon-hamburger.svg";
+
 import NavBar from "./components/NavBar";
 import HeaderSection from "./components/HeaderSection";
 import IconCard from "./components/ui/IconCard";
 import Button from "./components/ui/Button";
 
+export function MenuBar(props) {
+  return (
+    <div className=" absolute flex flex-col px-8 bg-base-700 items-center gap-5 pt-10 font-semibold h-128 z-40 w-full tablet:hidden">
+      <a href="#" className=" text-base-110 w-full text-center">
+        HOW WE WORK
+      </a>
+      <a href="#" className=" text-base-110 w-full text-center">
+        BLOG
+      </a>
+      <a href="#" className=" text-base-110 w-full text-center">
+        ACCOUNT
+      </a>
+      <Button inverse className="w-full">
+        <a href="#">VIEW PLANS</a>
+      </Button>
+      <img src={MENU_DECORATOR} alt="" className="absolute bottom-0 right-0" />
+    </div>
+  );
+}
+
 function App() {
+  const [menuState, setMenuState] = useState(false);
+  const icon = menuState ? CLOSE_ICON : HAMBURGER;
+  const iconOnClick = menuState ? closeMenu : openMenu;
+
+  function openMenu() {
+    setMenuState(true);
+  }
+  function closeMenu() {
+    setMenuState(false);
+  }
+
   return (
     <>
-      <NavBar />
-      <main className=" max-w-lg mx-auto laptop:max-w-full">
+      <NavBar icon={icon} iconOnClick={iconOnClick} />
+      <main className=" max-w-lg mx-auto laptop:max-w-full relative">
+        {menuState && <MenuBar />}
+        {/* <div className=" absolute flex flex-col px-8 bg-base-700 items-center gap-5 pt-10 font-semibold h-128 z-40 w-full">
+          <a href="#" className=" text-base-110 w-full text-center">
+            HOW WE WORK
+          </a>
+          <a href="#" className=" text-base-110 w-full text-center">
+            BLOG
+          </a>
+          <a href="#" className=" text-base-110 w-full text-center">
+            ACCOUNT
+          </a>
+          <Button inverse className="w-full">
+            <a href="#">VIEW PLANS</a>
+          </Button>
+          <img
+            src={MENU_DECORATOR}
+            alt=""
+            className="absolute bottom-0 right-0"
+          />
+        </div> */}
         <HeaderSection />
         <section className=" pt-36 laptop:pt-64 max-w-7xl laptop:px-16 laptop:mx-auto">
           <div className=" bg-gray-300 p-px w-32 mx-auto mb-8 laptop:mx-0"></div>
